@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/RohanModi06/RohanModi06/issues"
   },
-  "homepage": "https://github.com/RohanModi06/RohanModi06#readme"
+  "homepage": "https://github.com/RohanModi06/RohanModi06#readme",
+  "devDependencies": {
+    "bootstrap": "^4.6.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
