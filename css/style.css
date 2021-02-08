@@ -1,0 +1,8 @@
+.navbar .container {
+  min-width: 75%; }
+
+.navbar #navbarNav ul li {
+  padding: 0 10px; }
+  @media (min-width: 1080px) {
+    .navbar #navbarNav ul li {
+      padding: 0 20px; } }
