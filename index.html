@@ -17,7 +17,7 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
+    <nav class="navbar navbar-dark fixed-top navbar-expand-sm bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">Rohan Modi</a>
         <button
@@ -47,8 +47,14 @@
       </div>
     </nav>
 
-    <section>
-      <div class="container">
+    <section id="intro">
+      <div id="videoDiv">
+        <video autoplay loop muted id="intro_bg">
+          <source src="videos/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="container" id="videoMessage">
         <div class="row">
           <div class="col-md-8 col-sm-12">
             <div class="home-text">
@@ -63,11 +69,16 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <video controls autoplay loop muted>
-        <source src="videos/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <h2>Javascript</h2>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
