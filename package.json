@@ -5,6 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "npm run watch:all",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/RohanModi06/RohanModi06#readme",
   "devDependencies": {
     "bootstrap": "^4.6.0",
+    "gh-pages": "^3.1.0",
     "node-sass": "^5.0.0",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.1"
