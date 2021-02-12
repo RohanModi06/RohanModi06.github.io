@@ -17,4 +17,16 @@ window.onscroll = () => {
     // $("#contact").parallax("20%", 20);
   }
   initParallax();
+
+  $("[data-trigger]").on("click", function () {
+    var trigger_id = $(this).attr("data-trigger");
+    $(trigger_id).toggleClass("show");
+    $("body").toggleClass("offcanvas-active");
+  });
+
+  // close button
+  $(".btn-close").on("click", function (e) {
+    $(".navbar-collapse").removeClass("show");
+    $("body").removeClass("offcanvas-active");
+  });
 })(jQuery);
