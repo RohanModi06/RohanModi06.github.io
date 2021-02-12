@@ -61,11 +61,11 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.75); }
 
 #videoMessage {
   position: absolute;
-  padding-top: 15rem;
+  padding-top: 22rem;
   top: 0;
   right: 0;
   bottom: 0;
@@ -96,14 +96,17 @@ body {
 
 .home-text {
   color: #e09200;
-  font-size: 0.8rem; }
+  font-size: 1.2rem; }
+  @media (max-width: 786px) {
+    .home-text {
+      text-align: center; } }
   @media (min-width: 786px) {
     .home-text {
       font-size: 1.4rem; } }
   .home-text h1 {
     color: floralwhite;
     font-family: "Orbitron", sans-serif;
-    font-size: 3rem; }
+    font-size: 3.3rem; }
     @media (min-width: 786px) {
       .home-text h1 {
         font-size: 5rem; } }

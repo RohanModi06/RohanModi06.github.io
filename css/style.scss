@@ -86,12 +86,12 @@ body {
   height: 100vh;
   position: relative;
 
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 #videoMessage {
   position: absolute;
-  padding-top: 15rem;
+  padding-top: 22rem;
 
   @media (min-width: 786px) {
     padding-top: 22rem;
@@ -128,14 +128,17 @@ body {
 .home-text {
   // font-family: "Orbitron", sans-serif;
   color: #e09200;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  @media (max-width: 786px) {
+    text-align: center;
+  }
   @media (min-width: 786px) {
     font-size: 1.4rem;
   }
   h1 {
     color: $fl;
     font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
+    font-size: 3.3rem;
     @media (min-width: 786px) {
       font-size: 5rem;
     }
