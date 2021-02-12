@@ -1,0 +1,20 @@
+const navbar = document.querySelector(".navbar");
+const navbar_col = document.querySelector(".navbar-collapse");
+window.onscroll = () => {
+  if (window.scrollY > 50) {
+    navbar.style.backgroundColor = "rgb(77, 196, 125)";
+  } else {
+    navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  }
+};
+
+(function ($) {
+  function initParallax() {
+    $("#intro").parallax("60%", 100);
+    $("#skills").parallax("100%", 80);
+    // $("#project").parallax("80%", 60);
+    // $("#team").parallax("40%", 40);
+    // $("#contact").parallax("20%", 20);
+  }
+  initParallax();
+})(jQuery);

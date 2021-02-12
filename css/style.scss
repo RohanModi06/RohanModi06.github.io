@@ -1,9 +1,32 @@
+$fl: floralwhite;
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+  margin: 0px auto;
+  padding: $pad-up-dn $pad-left-right;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
+
 .navbar {
-  background-color: rgba(0, 0, 0, 0) !important;
-  height: 65px;
+  background-color: rgba(0, 0, 0, 0);
+  color: $fl;
+  height: 80px;
   z-index: 1;
   .container {
     min-width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .navbar-brand {
+    font-family: "Orbitron", sans-serif;
+    color: $fl;
+    font-size: 25px;
   }
   #navbarNav {
     ul {
@@ -15,6 +38,10 @@
       }
     }
   }
+}
+
+.navbar.collapse {
+  display: flex;
 }
 
 #intro {
@@ -29,12 +56,16 @@
   height: 100vh;
   position: relative;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #videoMessage {
   position: absolute;
-  padding-top: 20rem;
+  padding-top: 15rem;
+
+  @media (min-width: 786px) {
+    padding-top: 22rem;
+  }
   top: 0;
   right: 0;
   bottom: 0;
@@ -61,5 +92,123 @@
   position: absolute;
   min-height: 100%;
   min-width: 100%;
-  background-color: aliceblue;
+  background-color: #ffffff;
+}
+
+.home-text {
+  // font-family: "Orbitron", sans-serif;
+  color: #e09200;
+  font-size: 0.8rem;
+  @media (min-width: 786px) {
+    font-size: 1.4rem;
+  }
+  h1 {
+    color: $fl;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    @media (min-width: 786px) {
+      font-size: 5rem;
+    }
+  }
+}
+
+#skills {
+  @include zero-margin(275px, 0px);
+  text-align: center;
+  h1 {
+    font-size: 30px;
+    letter-spacing: 16px;
+    font-weight: 200;
+    margin-bottom: 150px;
+    @media (min-width: 786px) {
+      font-size: 45px;
+      letter-spacing: 22px;
+      font-weight: 200;
+      margin-bottom: 150px;
+    }
+  }
+
+  .project-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 60px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      -webkit-transition: all ease-in-out 0.4s;
+      transition: all ease-in-out 0.4s;
+      @media (max-width: 560px) {
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (min-width: 1076px) {
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      display: block;
+    }
+  }
+
+  .project-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 560px) {
+      width: 80%;
+      height: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 1076px) {
+      width: 80%;
+      height: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    display: block;
+    // margin-bottom: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+
+    .project-info {
+      padding: 4em 0;
+      max-width: 100%;
+      max-height: 100%;
+      h1 {
+        color: #ffffff;
+        margin: 0;
+      }
+      h3 {
+        color: #d9d9d9;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        margin-top: 0;
+      }
+    }
+
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+}
+
+.project-item:hover img {
+  transform: scale(1.1);
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1 !important;
 }
