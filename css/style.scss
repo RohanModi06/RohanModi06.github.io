@@ -118,6 +118,20 @@ body {
   transition: 1s opacity;
 }
 
+#start {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1100;
+  background-color: #ffffff;
+}
+#start {
+  // transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.65s ease;
+  // transition-delay: 5s;
+}
+
 #skills {
   position: absolute;
 
@@ -139,9 +153,14 @@ body {
     color: $fl;
     font-family: "Orbitron", sans-serif;
     font-size: 3.3rem;
+    animation-delay: 0.05s;
     @media (min-width: 786px) {
       font-size: 5rem;
     }
+  }
+  p {
+    overflow: hidden;
+    animation-delay: 0.1s;
   }
 }
 

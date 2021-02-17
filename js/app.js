@@ -8,6 +8,12 @@ window.onscroll = () => {
   }
 };
 
+setTimeout(() => {
+  document.querySelector("#start").style.transform = "scaleY(0)";
+}, 5);
+
+// document.querySelector("#start").style.transform = "scaleY(0)";
+
 (function ($) {
   function initParallax() {
     $("#intro").parallax("60%", 100);

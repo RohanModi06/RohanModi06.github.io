@@ -89,6 +89,17 @@ body {
   background-size: cover;
   transition: 1s opacity; }
 
+#start {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1100;
+  background-color: #ffffff; }
+
+#start {
+  transform-origin: top;
+  transition: transform 0.65s ease; }
+
 #skills {
   position: absolute;
   min-width: 100%;
@@ -106,10 +117,14 @@ body {
   .home-text h1 {
     color: floralwhite;
     font-family: "Orbitron", sans-serif;
-    font-size: 3.3rem; }
+    font-size: 3.3rem;
+    animation-delay: 0.05s; }
     @media (min-width: 786px) {
       .home-text h1 {
         font-size: 5rem; } }
+  .home-text p {
+    overflow: hidden;
+    animation-delay: 0.1s; }
 
 #skills {
   margin: 0px auto;
