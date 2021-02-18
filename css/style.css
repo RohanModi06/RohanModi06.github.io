@@ -134,6 +134,9 @@ body {
     border-radius: 3px;
     animation-delay: 0.15s;
     width: 42%; }
+    @media (max-width: 576px) {
+      .home-text a {
+        width: 47%; } }
     @media (min-width: 1060px) {
       .home-text a {
         width: 27%;
