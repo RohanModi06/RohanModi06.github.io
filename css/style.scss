@@ -19,6 +19,12 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  margin: 0;
+  background-color: #ddd;
+  max-width: 5%;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   color: $fl;
@@ -107,7 +113,7 @@ body {
 
 #videoMessage {
   position: absolute;
-  padding-top: 22rem;
+  padding-top: 19rem;
 
   @media (min-width: 786px) {
     padding-top: 22rem;
@@ -187,9 +193,30 @@ body {
 
 #about {
   min-width: 100%;
-  background-color: #ffffff;
+  background-color: #e9e7e7;
+  // background-color: #ffffff;
+
   @include zero-margin(175px, 0px);
   text-align: center;
+
+  img {
+    width: 280px;
+    height: 350px;
+    margin-bottom: 100px;
+    background-color: #494949;
+    opacity: 120%;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: #000000;
+    // #hi {
+    //   font-size: 40px;
+    //   font-weight: 300;
+    // }
+  }
 }
 
 #skills {
