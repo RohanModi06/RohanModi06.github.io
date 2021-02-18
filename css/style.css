@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
+html {
+  scroll-behavior: smooth; }
+
 body {
   background: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
@@ -19,7 +22,15 @@ body {
     color: floralwhite;
     font-size: 25px; }
   .navbar #navbarNav ul li {
+    font-size: 17px;
     padding: 0 10px; }
+    .navbar #navbarNav ul li .nav-link {
+      color: floralwhite;
+      opacity: 0.7; }
+    .navbar #navbarNav ul li .nav-link:hover {
+      opacity: 0.9; }
+    .navbar #navbarNav ul li .active {
+      opacity: 1; }
     @media (min-width: 1080px) {
       .navbar #navbarNav ul li {
         padding: 0 20px; } }
@@ -100,11 +111,6 @@ body {
   transform-origin: top;
   transition: transform 0.65s ease; }
 
-#skills {
-  position: absolute;
-  min-width: 100%;
-  background-color: #ffffff; }
-
 .home-text {
   color: #e09200;
   font-size: 1.2rem; }
@@ -123,10 +129,26 @@ body {
       .home-text h1 {
         font-size: 5rem; } }
   .home-text p {
-    overflow: hidden;
     animation-delay: 0.1s; }
+  .home-text a {
+    border-radius: 3px;
+    animation-delay: 0.15s;
+    width: 42%; }
+    @media (min-width: 1060px) {
+      .home-text a {
+        width: 27%;
+        margin-top: 5px; } }
+
+#about {
+  min-width: 100%;
+  background-color: #ffffff;
+  margin: 0px auto;
+  padding: 175px 0px;
+  text-align: center; }
 
 #skills {
+  min-width: 100%;
+  background-color: #ffffff;
   margin: 0px auto;
   padding: 175px 0px;
   text-align: center; }

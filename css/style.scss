@@ -1,4 +1,5 @@
 $fl: floralwhite;
+$f: rgb(6, 139, 60);
 $ff: "Orbitron", sans-serif;
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
@@ -6,6 +7,10 @@ $ff: "Orbitron", sans-serif;
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
   margin: 0px auto;
   padding: $pad-up-dn $pad-left-right;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,6 +38,17 @@ body {
   #navbarNav {
     ul {
       li {
+        font-size: 17px;
+        .nav-link {
+          color: $fl;
+          opacity: 0.7;
+        }
+        .nav-link:hover {
+          opacity: 0.9;
+        }
+        .active {
+          opacity: 1;
+        }
         padding: 0 10px;
         @media (min-width: 1080px) {
           padding: 0 20px;
@@ -132,13 +148,6 @@ body {
   // transition-delay: 5s;
 }
 
-#skills {
-  position: absolute;
-
-  min-width: 100%;
-  background-color: #ffffff;
-}
-
 .home-text {
   // font-family: "Orbitron", sans-serif;
   color: #e09200;
@@ -159,12 +168,29 @@ body {
     }
   }
   p {
-    overflow: hidden;
     animation-delay: 0.1s;
+  }
+  a {
+    border-radius: 3px;
+    animation-delay: 0.15s;
+    width: 42%;
+    @media (min-width: 1060px) {
+      width: 27%;
+      margin-top: 5px;
+    }
   }
 }
 
+#about {
+  min-width: 100%;
+  background-color: #ffffff;
+  @include zero-margin(175px, 0px);
+  text-align: center;
+}
+
 #skills {
+  min-width: 100%;
+  background-color: #ffffff;
   @include zero-margin(175px, 0px);
   text-align: center;
   .heading {
