@@ -2,8 +2,8 @@ const navbar = document.querySelector(".navbar");
 const navbar_col = document.querySelector(".navbar-collapse");
 window.onscroll = () => {
   if (window.scrollY > 50) {
-    // navbar.style.backgroundColor = "rgb(77, 196, 125)";
-    navbar.style.backgroundColor = "rgb(6, 139, 60)";
+    navbar.style.backgroundColor = "#bd3005";
+    // navbar.style.backgroundColor = "rgb(6, 139, 60)";
   } else {
     navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
   }
@@ -18,6 +18,7 @@ document.querySelector("#start").style.transform = "scaleY(0)";
 (function ($) {
   function initParallax() {
     $("#intro").parallax("60%", 100);
+    $("#about").parallax("100%", 80);
     $("#skills").parallax("100%", 80);
     // $("#project").parallax("80%", 60);
     // $("#team").parallax("40%", 40);
