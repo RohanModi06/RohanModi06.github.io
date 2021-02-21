@@ -2,6 +2,8 @@ $fl: floralwhite;
 $f: #bd3005;
 $ff: "Orbitron", sans-serif;
 
+$nav-height: 80px;
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -28,7 +30,7 @@ hr {
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   color: $fl;
-  height: 80px;
+  height: $nav-height;
   font-size: 16px;
   z-index: 1;
   .container {
@@ -332,7 +334,8 @@ hr {
           margin-top: 40px;
         }
       }
-      h3 {
+      .fas,
+      .far {
         color: #d9d9d9;
         font-size: 1rem;
         letter-spacing: 0.2px;
@@ -352,5 +355,22 @@ hr {
   .project-item:hover .project-overlay {
     opacity: 1 !important;
     transform: scale(1.1);
+  }
+}
+
+footer {
+  width: 100%;
+  min-height: 100%;
+  // position: relative;
+  #map {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+  }
+  #contact {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
   }
 }

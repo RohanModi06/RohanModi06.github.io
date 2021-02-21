@@ -39,6 +39,24 @@ document.querySelector("#start").style.transform = "scaleY(0)";
   });
 })(jQuery);
 
+let map;
+
+function initMap() {
+  const iitg = { lat: 26.1878, lng: 91.6916 };
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: iitg,
+    zoom: 14,
+    mapId: "9d81a454f019cd51",
+    fullscreenControl: false,
+    gestureHandling: "auto",
+    scrollwheel: false,
+  });
+  const marker = new google.maps.Marker({
+    position: iitg,
+    map: map,
+  });
+}
+
 // $(function () {
 //   $("a[href*=#]").bind("click", function (e) {
 //     e.preventDefault(); // prevent hard jump, the default behavior
