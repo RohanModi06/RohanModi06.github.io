@@ -1,6 +1,7 @@
 $fl: floralwhite;
 $f: #bd3005;
 $ff: "Orbitron", sans-serif;
+$theme: #d67456;
 
 $nav-height: 80px;
 
@@ -209,7 +210,7 @@ hr {
         width: 220px;
         height: 240px;
         background-color: #494949;
-        background-color: #d67456;
+        background-color: $theme;
         opacity: 115%;
         padding: 7px;
       }
@@ -223,7 +224,7 @@ hr {
 
       min-height: 100%;
       background-color: #a0fd98a1;
-      background-color: #d67456;
+      background-color: $theme;
 
       p {
         font-size: 20px;
@@ -363,14 +364,33 @@ footer {
   min-height: 100%;
   // position: relative;
   #map {
-    min-height: 100%;
+    min-height: calc(100% - 80px);
+    min-width: 100%;
+    position: absolute;
+  }
+  #map2 {
+    // display: none;
+    min-height: calc(100% - 80px);
     min-width: 100%;
     position: absolute;
   }
   #contact {
     background-color: rgba(0, 0, 0, 0.7);
-    min-height: 100%;
+    min-height: calc(100% - 80px);
     min-width: 100%;
     position: absolute;
+    align-items: center;
+  }
+  #map_btn {
+    background-color: $theme;
+    color: $fl;
+    font-weight: 600;
+    position: absolute;
+    width: 200px;
+    // @media (min-width: 1076px) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: calc((100% - 200px) / 2);
+    z-index: 1100;
   }
 }

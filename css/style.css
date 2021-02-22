@@ -283,11 +283,26 @@ footer {
   width: 100%;
   min-height: 100%; }
   footer #map {
-    min-height: 100%;
+    min-height: calc(100% - 80px);
+    min-width: 100%;
+    position: absolute; }
+  footer #map2 {
+    min-height: calc(100% - 80px);
     min-width: 100%;
     position: absolute; }
   footer #contact {
     background-color: rgba(0, 0, 0, 0.7);
-    min-height: 100%;
+    min-height: calc(100% - 80px);
     min-width: 100%;
-    position: absolute; }
+    position: absolute;
+    align-items: center; }
+  footer #map_btn {
+    background-color: #d67456;
+    color: floralwhite;
+    font-weight: 600;
+    position: absolute;
+    width: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: calc((100% - 200px) / 2);
+    z-index: 1100; }

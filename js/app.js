@@ -39,23 +39,54 @@ document.querySelector("#start").style.transform = "scaleY(0)";
   });
 })(jQuery);
 
-let map;
-
+let map1, map2;
+const iitg = { lat: 26.1878, lng: 91.6916 };
+const map_id = "d49d706b6a5402b5";
 function initMap() {
-  const iitg = { lat: 26.1878, lng: 91.6916 };
-  map = new google.maps.Map(document.getElementById("map"), {
+  map1 = new google.maps.Map(document.getElementById("map"), {
     center: iitg,
     zoom: 14,
-    mapId: "9d81a454f019cd51",
+    mapId: map_id,
     fullscreenControl: false,
     gestureHandling: "auto",
     scrollwheel: false,
   });
-  const marker = new google.maps.Marker({
+
+  map2 = new google.maps.Map(document.getElementById("map2"), {
+    center: iitg,
+    zoom: 14,
+    fullscreenControl: false,
+    gestureHandling: "auto",
+    scrollwheel: false,
+  });
+
+  const marker1 = new google.maps.Marker({
     position: iitg,
-    map: map,
+    map: map1,
+  });
+  const marker2 = new google.maps.Marker({
+    position: iitg,
+    map: map2,
   });
 }
+
+document.querySelector("#map_btn").addEventListener("click", () => {
+  let map_disp = document.querySelector("#map");
+  let contact = document.querySelector("#contact");
+  console.log(map_disp.style.display);
+  if (map_disp.style.display === "" || map_disp.style.display === "block") {
+    map_disp.style.display = "none";
+    contact.style.display = "none";
+    document.querySelector("#map_btn").textContent = "Switch to Contact Us";
+    // contact.style.background = "rgb(255,255,255,0.0)";
+  } else {
+    map_disp.style.display = "block";
+    contact.style.display = "block";
+    document.querySelector("#map_btn").textContent = "Switch to Map";
+    console.log(map2.center);
+    // contact.style.background = "rgb(0,0,0,0.7)";
+  }
+});
 
 // $(function () {
 //   $("a[href*=#]").bind("click", function (e) {
