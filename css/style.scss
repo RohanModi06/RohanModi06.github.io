@@ -354,6 +354,7 @@ hr {
 }
 @media (min-width: 786px) {
   .project-item:hover {
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.7);
     img {
       transform: scale(1.1);
       // border: 1px $theme;
@@ -369,6 +370,7 @@ hr {
 footer {
   width: 100%;
   min-height: 100%;
+
   // position: relative;
   #map {
     min-height: calc(100% - 80px);
@@ -396,7 +398,7 @@ footer {
     font-weight: 600;
     position: absolute;
     width: 200px;
-    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.5);
     // @media (min-width: 1076px) {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
