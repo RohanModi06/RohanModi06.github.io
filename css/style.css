@@ -187,20 +187,20 @@ hr {
 
 #skills {
   min-width: 100%;
-  background-color: #ffffff;
+  background-color: #818181;
+  color: floralwhite;
   margin: 0px auto;
   padding: 175px 0px;
   text-align: center; }
   #skills .heading {
     font-size: 30px;
     letter-spacing: 16px;
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 100px; }
     @media (min-width: 786px) {
       #skills .heading {
         font-size: 45px;
         letter-spacing: 22px;
-        font-weight: 200;
         margin-bottom: 100px; } }
   #skills .project-item {
     overflow: hidden;
@@ -285,7 +285,8 @@ footer {
   footer #map {
     min-height: calc(100% - 80px);
     min-width: 100%;
-    position: absolute; }
+    position: absolute;
+    animation-duration: 0.6s; }
   footer #map2 {
     min-height: calc(100% - 80px);
     min-width: 100%;
@@ -295,14 +296,18 @@ footer {
     min-height: calc(100% - 80px);
     min-width: 100%;
     position: absolute;
-    align-items: center; }
+    align-items: center;
+    animation-duration: 0.6s; }
   footer #map_btn {
     background-color: #d67456;
     color: floralwhite;
     font-weight: 600;
     position: absolute;
     width: 200px;
+    box-shadow: none;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     margin-left: calc((100% - 200px) / 2);
     z-index: 1100; }
+    footer #map_btn:hover {
+      background-color: #c03715; }

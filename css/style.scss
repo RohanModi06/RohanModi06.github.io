@@ -1,7 +1,10 @@
 $fl: floralwhite;
-$f: #bd3005;
+$f: #991200;
+$mf: #c03715;
 $ff: "Orbitron", sans-serif;
 $theme: #d67456;
+
+$map_t: 0.6s;
 
 $nav-height: 80px;
 
@@ -249,18 +252,19 @@ hr {
 
 #skills {
   min-width: 100%;
-  background-color: #ffffff;
+  background-color: #818181;
+  color: $fl;
   @include zero-margin(175px, 0px);
   text-align: center;
   .heading {
     font-size: 30px;
     letter-spacing: 16px;
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 100px;
     @media (min-width: 786px) {
       font-size: 45px;
       letter-spacing: 22px;
-      font-weight: 200;
+
       margin-bottom: 100px;
     }
   }
@@ -351,6 +355,7 @@ hr {
 @media (min-width: 786px) {
   .project-item:hover img {
     transform: scale(1.1);
+    // border: 1px $theme;
   }
 
   .project-item:hover .project-overlay {
@@ -362,11 +367,13 @@ hr {
 footer {
   width: 100%;
   min-height: 100%;
+
   // position: relative;
   #map {
     min-height: calc(100% - 80px);
     min-width: 100%;
     position: absolute;
+    animation-duration: $map_t;
   }
   #map2 {
     // display: none;
@@ -380,6 +387,7 @@ footer {
     min-width: 100%;
     position: absolute;
     align-items: center;
+    animation-duration: $map_t;
   }
   #map_btn {
     background-color: $theme;
@@ -387,10 +395,14 @@ footer {
     font-weight: 600;
     position: absolute;
     width: 200px;
+    box-shadow: none;
     // @media (min-width: 1076px) {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     margin-left: calc((100% - 200px) / 2);
     z-index: 1100;
+    &:hover {
+      background-color: $mf;
+    }
   }
 }

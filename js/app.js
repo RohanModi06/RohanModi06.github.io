@@ -2,8 +2,8 @@ const navbar = document.querySelector(".navbar");
 const navbar_col = document.querySelector(".navbar-collapse");
 window.onscroll = () => {
   if (window.scrollY > 50) {
-    navbar.style.backgroundColor = "#bd3005";
-    // navbar.style.backgroundColor = "rgb(6, 139, 60)";
+    // navbar.style.backgroundColor = "#bd3005";
+    navbar.style.backgroundColor = "#991200";
   } else {
     navbar.style.backgroundColor = "rgba(0, 0, 0, 0)";
   }
@@ -74,14 +74,29 @@ document.querySelector("#map_btn").addEventListener("click", () => {
   let map_disp = document.querySelector("#map");
   let contact = document.querySelector("#contact");
   console.log(map_disp.style.display);
-  if (map_disp.style.display === "" || map_disp.style.display === "block") {
-    map_disp.style.display = "none";
-    contact.style.display = "none";
+  if (contact.style.display === "" || contact.style.display === "block") {
+    map_disp.classList.remove("animate__fadeIn");
+    contact.classList.remove("animate__fadeIn");
+
+    map_disp.classList.add("animate__fadeOut");
+    contact.classList.add("animate__fadeOut");
+    // map_disp.style.display = "none";
+    setTimeout(() => {
+      map_disp.style.display = "none";
+      contact.style.display = "none";
+    }, 500);
+
     document.querySelector("#map_btn").textContent = "Switch to Contact Us";
     // contact.style.background = "rgb(255,255,255,0.0)";
   } else {
     map_disp.style.display = "block";
     contact.style.display = "block";
+    map_disp.classList.remove("animate__fadeOut");
+    contact.classList.remove("animate__fadeOut");
+
+    map_disp.classList.add("animate__fadeIn");
+    contact.classList.add("animate__fadeIn");
+
     document.querySelector("#map_btn").textContent = "Switch to Map";
     console.log(map2.center);
     // contact.style.background = "rgb(0,0,0,0.7)";
