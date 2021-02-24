@@ -8,6 +8,12 @@ $map_t: 0.6s;
 
 $nav-height: 80px;
 
+$bg: #4d4545;
+
+$color: #ed8d8d;
+
+$font-stack: "Lato", sans-serif;
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -25,18 +31,12 @@ body {
   overflow-x: hidden;
 }
 
-hr {
-  margin: 0;
-  background-color: #ddd;
-  max-width: 5%;
-}
-
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   color: $fl;
   height: $nav-height;
   font-size: 16px;
-  z-index: 1;
+  z-index: 1200;
   .container {
     min-width: 70%;
     margin-top: auto;
@@ -203,7 +203,7 @@ hr {
   // background-color: #ffffff;
 
   text-align: center;
-
+  z-index: 3;
   .container {
     min-width: 100%;
     min-height: 100%;
@@ -406,5 +406,155 @@ footer {
     &:hover {
       background-color: $mf;
     }
+  }
+}
+
+#timeline {
+  @include zero-margin(80px, 0px);
+  background-color: $bg;
+  color: $theme;
+  font-family: $font-stack;
+  h1 {
+    margin-bottom: 50px;
+    color: $fl;
+    margin-left: 80px;
+    @media (min-width: 1076px) {
+      margin-left: 160px;
+    }
+    font-size: 50px;
+  }
+  position: relative;
+  z-index: -2;
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 100%;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    @media (min-width: 1076px) {
+      width: 350px;
+      height: 350px;
+    }
+    background-color: #b66349;
+    -webkit-transform-origin: 0 bottom;
+    transform-origin: 0 bottom;
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+
+  &:after {
+    transform: rotate(135deg);
+    width: 210px;
+    height: 210px;
+    @media (min-width: 1076px) {
+      width: 270px;
+      height: 270px;
+    }
+    background-color: #d67456;
+    box-shadow: 0 0 0 1px #d67456;
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 100%;
+    left: 0;
+    transform-origin: 0 bottom;
+
+    z-index: 0;
+  }
+}
+
+.blue-bg {
+  height: 100%;
+  z-index: 5;
+  position: relative;
+}
+
+.circle {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color: $theme;
+  color: $bg;
+  max-height: 50px;
+  z-index: 2;
+}
+
+.how-it-works.row {
+  display: flex;
+  .col-2 {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 3px solid $theme;
+      z-index: 1;
+    }
+  }
+  .col-2.bottom {
+    &::after {
+      height: 50%;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  .col-2.full {
+    &::after {
+      height: 100%;
+      left: calc(50% - 3px);
+    }
+  }
+  .col-2.top {
+    &::after {
+      height: 50%;
+      left: 50%;
+      top: 0;
+    }
+  }
+}
+
+.timeline {
+  div {
+    padding: 0;
+    height: 40px;
+  }
+  hr {
+    border-top: 3px solid $theme;
+    margin: 0;
+    top: 17px;
+    position: relative;
+  }
+  .col-2 {
+    display: flex;
+    overflow: hidden;
+  }
+  .corner {
+    border: 3px solid $theme;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+  }
+  .top-right {
+    left: 50%;
+    top: -50%;
+  }
+  .left-bottom {
+    left: -50%;
+    top: calc(50% - 3px);
+  }
+  .top-left {
+    left: -50%;
+    top: -50%;
+  }
+  .right-bottom {
+    left: 50%;
+    top: calc(50% - 3px);
   }
 }
