@@ -210,8 +210,8 @@ body {
     #skills .project-item img {
       max-width: 100%;
       max-height: 100%;
-      -webkit-transition: all ease-in-out 0.4s;
-      transition: all ease-in-out 0.4s;
+      -webkit-transition: all ease-in-out 0.2s;
+      transition: all ease-in-out 0.2s;
       display: block; }
       @media (max-width: 560px) {
         #skills .project-item img {
@@ -236,8 +236,8 @@ body {
     bottom: 0;
     left: 0;
     opacity: 0;
-    -webkit-transition: all ease-in-out 0.4s;
-    transition: all ease-in-out 0.4s; }
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s; }
     @media (max-width: 560px) {
       #skills .project-overlay {
         max-width: 80%;
@@ -392,12 +392,19 @@ footer {
     height: 50%;
     left: 50%;
     top: 50%; }
-  .how-it-works.row .col-2.full::after {
+  .how-it-works.row .col-2.full-right::after {
     height: 100%;
     left: calc(50% - 3px); }
+  .how-it-works.row .col-2.full-left::after {
+    height: 100%;
+    left: 50%; }
   .how-it-works.row .col-2.top::after {
     height: 50%;
     left: 50%;
+    top: 0; }
+  .how-it-works.row .col-2.top-l::after {
+    height: 50%;
+    left: calc(50% - 3px);
     top: 0; }
 
 .timeline div {
