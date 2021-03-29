@@ -19,6 +19,7 @@ document.querySelector("#start").style.transform = "scaleY(0)";
   function initParallax() {
     $("#intro").parallax("60%", 100);
     $("#about").parallax("100%", 80);
+    $("#timeline").parallax("100%", 80);
     $("#skills").parallax("100%", 80);
     // $("#project").parallax("80%", 60);
     // $("#team").parallax("40%", 40);
