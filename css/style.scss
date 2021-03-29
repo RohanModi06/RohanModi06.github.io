@@ -115,6 +115,10 @@ body {
   position: relative;
 
   background-color: rgba(0, 0, 0, 0.75);
+  #videoDiv {
+    z-index: -2;
+    position: relative;
+  }
 }
 
 #videoMessage {
@@ -424,7 +428,8 @@ footer {
     font-size: 50px;
   }
   position: relative;
-  z-index: -2;
+  // z-index: -1;
+  overflow: hidden;
   &:before {
     position: absolute;
     content: "";

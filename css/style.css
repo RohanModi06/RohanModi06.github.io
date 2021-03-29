@@ -73,6 +73,9 @@ body {
   height: 100vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.75); }
+  #intro #videoDiv {
+    z-index: -2;
+    position: relative; }
 
 #videoMessage {
   position: absolute;
@@ -315,7 +318,7 @@ footer {
   color: #d67456;
   font-family: "Lato", sans-serif;
   position: relative;
-  z-index: -2; }
+  overflow: hidden; }
   #timeline h1 {
     margin-bottom: 50px;
     color: floralwhite;
